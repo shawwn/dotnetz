@@ -9,7 +9,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-
+typing-extensions = "^4.0.1"
 
 [build-system]
 requires = ["setuptools", "poetry-core"]

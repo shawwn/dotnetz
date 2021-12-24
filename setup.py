@@ -2,10 +2,13 @@
 from setuptools import setup
 
 packages = \
-['dotnetz']
+['dotnetz', 'dotnetz.System']
 
 package_data = \
 {'': ['*']}
+
+install_requires = \
+['typing-extensions>=4.0.1,<5.0.0']
 
 setup_kwargs = {
     'name': 'dotnetz',
@@ -19,6 +22,7 @@ setup_kwargs = {
     'url': 'https://github.com/shawwn/dotnetz',
     'packages': packages,
     'package_data': package_data,
+    'install_requires': install_requires,
     'python_requires': '>=3.6,<4.0',
 }
 
