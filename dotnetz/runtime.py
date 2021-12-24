@@ -4,4 +4,8 @@ from functools import wraps
 try:
   from typing import ParamSpec
 except ImportError:
-  from typing_extensions import ParamSpec
+  try:
+    from typing_extensions import ParamSpec
+  except ImportError:
+    ParamSpec = TypeVar  # A hack for now
+
