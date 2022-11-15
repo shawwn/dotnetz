@@ -4,13 +4,6 @@ from dotnetz.runtime import *
 P = ParamSpec("P")
 T = TypeVar("T")
 
-def delegate(f: Callable[P, T]) -> Callable[P, T]:
-  @wraps(f)
-  def inner(*args: P.args, **kwargs: P.kwargs) -> T:
-    # await log_to_database()
-    return f(*args, **kwargs)
-  return inner
-
 class EventHandler(Generic[T, P]):
   handlers: List[Callable[P, T]]
 
