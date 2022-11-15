@@ -41,11 +41,13 @@ class EventHandler(Generic[T, P]):
     except ValueError:
       pass
 
-  def __iadd__(self, callback: Callable[P, T]):
-    return self.add(callback)
+  def __iadd__(self, callback: Callable[P, T]) -> EventHandler:
+    self.add(callback)
+    return self
 
-  def __isub__(self, callback: Callable[P, T]):
-    return self.remove(callback)
+  def __isub__(self, callback: Callable[P, T]) -> EventHandler:
+    self.remove(callback)
+    return self
 
   def __contains__(self, callback: Callable[P, T]):
     return callback in self.handlers
