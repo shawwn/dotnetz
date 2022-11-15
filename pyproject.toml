@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dotnetz"
-version = "0.1.3"
+version = "0.1.4"
 homepage = "https://github.com/shawwn/dotnetz"
 description = "An implementation of some .NET patterns in Python"
 authors = ["Shawn Presser"]
